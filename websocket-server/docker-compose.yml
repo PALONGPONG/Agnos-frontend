@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  websocket:
+    build: .
+    container_name: agnos-websocket
+    environment:
+      SOCKET_PORT: 3001
+      SOCKET_CORS_ORIGIN: "*" 
+    ports:
+      - "3001:3001"
+    restart: unless-stopped
